@@ -1,0 +1,168 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --base: #555;
+    --base-100:#f1f1f1;
+    --base-400: #555;
+    --base-800:#000;
+    --yellow: #ffda4b;
+    --yellow-100:#fffbe6;
+    --yellow-400: #ffda4b;
+    --yellow-800:#8b6f00;
+    --blue: #0a61ae;
+    --blue-100:#e2f8ff;
+    --blue-400: #61dafb;
+    --blue-800:#0a61ae;
+    /*learning color theory- 
+    might change this later to pinks instead of blues*/
+    
+
+}
+
+body{
+    /* <uniquifier>: Use a unique and descriptive class name
+       <weight>: Use a value from 100 to 900*/
+    font-family: "Advent Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 30px;
+
+  
+
+}
+        /*font link to google: 
+        https://fonts.google.com/selection?vfonly=true */
+      
+
+a{
+    text-decoration: none;
+    /*removes the all current effects like automatic
+    blue line under the header text*/
+    color: var(--blue);
+    /*var(--blue) changes the text color to the blue in root*/
+    &:hover{text-decoration: underline;}
+    /*makes the text have an underline wheen the mouse goes over it*/
+}
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display:flex;
+    justify-content: space-between; 
+    /*puts menu on right and the header on the left*/
+    max-width: 1440px; 
+    /*about the size of a desktop*/
+    margin:auto; 
+    /*centers if the margin is larger than ^*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2    );
+
+
+    .logo-holder{
+        display:flex;
+        padding:10px;
+        align-items: center;
+        font-weight: 600;
+        font-size: 45px;
+        
+
+        
+
+
+
+        .logo{
+            #logo-photo{
+            display: flex;
+            align-items: center;/*align and justify are to position the contents  */
+            justify-content: center;
+            margin-right: 20px;/*gives space between logo and text*/
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            }
+
+            .logo-text{
+                flex: 1;
+                
+    
+            }
+                
+        }
+    
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            list-style-type: none; 
+            gap: 5px;
+            
+            li{
+                display: inline-block;
+                a{
+                    display: inline-block;
+                    padding: 10px 20px;/*first number top/bottom and second is left and right*/
+                    color:var(--base);
+                    &:hover {
+                        background: var(--base-100);
+                        border-radius: 12%;
+                        text-decoration: none;
+
+                    }
+                }
+            }
+        }
+        .hamburger-toggle{
+            display: none;
+            color: var(--base-800); 
+            padding: 10px;
+            @media (max-width: 768px) {
+                display: inline-block;
+                position: absolute;
+                top: 20px;
+                right:20px;
+                
+            }
+
+        }
+    }
+
+    @media(max-width: 1024){
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media (max-width: 768px)/*if screen is less than 768px, nav items will dissapear*/ {
+        flex-direction: column;
+        align-items: center;
+        nav {
+            margin-top: 10px;
+            width: 100%;
+
+            ul{
+                display:none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                &.active {
+                    display: flex;
+                
+                
+                
+                a {
+                    width: 100%;
+                }
+            }
+
+            }
+        }
+    }
+    
+}
