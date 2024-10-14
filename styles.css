@@ -9,10 +9,10 @@
     --base-100:#f1f1f1;
     --base-400: #555;
     --base-800:#000;
-    --yellow: #ffda4b;
-    --yellow-100:#fffbe6;
-    --yellow-400: #ffda4b;
-    --yellow-800:#8b6f00;
+    --yellow: rgb(252, 180, 252);
+    --yellow-100:hsl(293, 100%, 95%);
+    --yellow-400: rgb(252, 180, 252);
+    --yellow-800:rgb(214, 6, 211);
     --blue: #0a61ae;
     --blue-100:#e2f8ff;
     --blue-400: #61dafb;
@@ -111,7 +111,7 @@ header {
                     padding: 10px 20px;/*first number top/bottom and second is left and right*/
                     color:var(--base);
                     &:hover {
-                        background: var(--base-100);
+                        background: var(--yellow-800);
                         border-radius: 12%;
                         text-decoration: none;
 
@@ -181,8 +181,12 @@ header {
     display: inline-block;
     padding: 10px 30px;
     background-color: var(--blue-800);
-    color: var(--blue-100); 
+    color: var(--yellow-100); 
     border-radius: 10px;
+    &:hover{
+        text-decoration: none;
+        background-color: var(--yellow-800);
+    }
 }
 .hero{
     display: flex;/*makes each item sit next to eachother as columns*/
