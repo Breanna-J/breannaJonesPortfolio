@@ -112,7 +112,7 @@ header {
                     color:var(--base);
                     &:hover {
                         background: var(--yellow-800);
-                        border-radius: 12%;
+                        border-radius: 20%;
                         text-decoration: none;
 
                     }
@@ -182,10 +182,15 @@ header {
     padding: 10px 30px;
     background-color: var(--blue-800);
     color: var(--yellow-100); 
-    border-radius: 10px;
+    border-radius: 20px;
+    transition: 0.3s all;
     &:hover{
         text-decoration: none;
         background-color: var(--yellow-800);
+    }
+    &.white{
+        background-color: white;
+        color: var(--base-800);
     }
 }
 .hero{
