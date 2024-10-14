@@ -166,3 +166,15 @@ header {
     }
     
 }
+.hero{
+    display: flex;/*makes each item sit next to eachother as columns*/
+    .hero-blue{
+        flex:1;
+    }
+    .hero-yellow{
+        flex:1;
+        background-color: var(--yellow);
+        border-radius: 25px;
+        
+    }
+}
