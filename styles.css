@@ -70,7 +70,7 @@ header {
         align-items: center;
         font-weight: 600;
         font-size: 45px;
-        
+
 
         
 
@@ -170,9 +170,9 @@ header {
     max-width: 1440px;
     margin:auto;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
-    @media (max-width: 1440px;){
+    @media (max-width: 1440px){
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -190,7 +190,7 @@ header {
 }
 .hero{
     display: flex;/*makes each item sit next to eachother as columns*/
-    margin-top: 10px;
+    margin-top: 50px;
     .hero-blue{
         flex: 1;
         background-color: var(--blue-100);
@@ -208,7 +208,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        .img-blue{
+        .BreannaJonesHandsOnHips{
             margin-top: -150px;
             max-width: 720px;
             margin-bottom: -1px;
