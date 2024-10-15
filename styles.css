@@ -9,10 +9,10 @@
     --base-100:#f1f1f1;
     --base-400: #555;
     --base-800:#000;
-    --yellow: #ffda4b;
-    --yellow-100:#fffbe6;
-    --yellow-400: #ffda4b;
-    --yellow-800:#8b6f00;
+    --yellow: rgb(252, 180, 252);
+    --yellow-100:hsl(293, 100%, 95%);
+    --yellow-400: rgb(252, 180, 252);
+    --yellow-800:rgb(214, 6, 211);
     --blue: #0a61ae;
     --blue-100:#e2f8ff;
     --blue-400: #61dafb;
@@ -61,6 +61,7 @@ header {
     margin:auto; 
     /*centers if the margin is larger than ^*/
     border-bottom: 1px solid rgba(0, 0, 0, 0.2    );
+    
 
 
     .logo-holder{
@@ -69,7 +70,7 @@ header {
         align-items: center;
         font-weight: 600;
         font-size: 45px;
-        
+
 
         
 
@@ -88,8 +89,7 @@ header {
 
             .logo-text{
                 flex: 1;
-                
-    
+                  
             }
                 
         }
@@ -111,8 +111,8 @@ header {
                     padding: 10px 20px;/*first number top/bottom and second is left and right*/
                     color:var(--base);
                     &:hover {
-                        background: var(--base-100);
-                        border-radius: 12%;
+                        background: var(--yellow-800);
+                        border-radius: 30%;
                         text-decoration: none;
 
                     }
@@ -165,4 +165,136 @@ header {
         }
     }
     
+}
+.container{
+    max-width: 1440px;
+    margin:auto;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @media (max-width: 1440px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.button{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--blue-800);
+    color: var(--yellow-100); 
+    border-radius: 20px;
+    transition: 0.3s all;
+    &:hover{
+        text-decoration: none;
+        background-color: var(--yellow-800);
+    }
+    &.light{
+        background-color: var(--yellow);
+        color: var(--base-800);
+        &:hover{
+            background-color: var(--yellow-100);
+        }
+    }
+    &.black{
+        background-color: black;    
+        color: var(--yellow);
+        &:hover{
+            background-color: var(--base-400);
+        }
+    }
+}
+h1{
+    font-size: 64px;
+    line-height:1;
+    margin-bottom: 10px;
+    small{
+        display: block;
+        font-weight: 100;
+    }
+    @media(max-width: 1024px){
+        font-size: 48px;
+    }
+}
+.hero{
+    display: flex;/*makes each item sit next to eachother as columns*/
+    @media(max-width: 1024px){
+        flex-direction: column;
+    }
+    margin-top: 50px;
+    .hero-blue{
+        flex: 1;
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        width: 55%;
+        .call-to-action{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a{
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        .social-links{
+            a{
+              &:hover{
+                text-decoration: none;
+              }  
+            }
+            .span{
+                @media(max-width: 768px){
+                    display:none;
+                }
+            }
+        }
+        }
+    }
+    .hero-yellow{
+        flex:1;
+        background-color:rgb(252, 180, 252);
+        border-radius:30px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .BreannaJonesHandsOnHips{
+            margin-top: -10px;
+            max-width: 750px;
+            margin-bottom: -1px;
+        }
+    }
+}
+.logos{
+    background-color: var(--base-100);
+    border-radius: 30px;
+    padding: 30px 30px;
+    @media (max-width: 1024px) {
+        border-radius: 0px;
+    }
+    .marquee{
+        width: 100vw;
+        max-width: 100%;
+        height: 135px;
+        overflow:hidden;
+        position:relative;
+        .track{
+            position:absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 40s linear infinite;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);/*make 2 copies of the image tags in the same div and set to -50%*/
+    }
 }
