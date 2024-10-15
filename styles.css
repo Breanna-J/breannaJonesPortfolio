@@ -111,7 +111,7 @@ header {
                     padding: 10px 20px;/*first number top/bottom and second is left and right*/
                     color:var(--base);
                     &:hover {
-                        background: var(--yellow-800);
+                        background: var(--yellow);
                         border-radius: 30%;
                         text-decoration: none;
 
