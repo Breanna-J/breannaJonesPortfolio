@@ -231,7 +231,7 @@ h1{
     }
     .hero-yellow{
         flex:1;
-        background-color:rgb(252, 180, 252);
+        background-color:var(--yellow-100);
         border-radius:30px;
         padding: 0px 30px;
         display: flex;
@@ -542,5 +542,15 @@ h3{
             }
 
         }
+    }
+}
+.resources{
+    background-color: var(--yellow-100);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 30px;
+    @media (max-width:768px) {
+        visibility: hidden;
+        
     }
 }
