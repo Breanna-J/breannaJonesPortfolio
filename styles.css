@@ -168,7 +168,7 @@ header {
 }
 .button{
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 40px;
     background-color: var(--blue-800);
     color: var(--yellow-100); 
     border-radius: 20px;
@@ -220,24 +220,13 @@ h1{
         justify-content: center;
         width: 65%;
         .call-to-action{
+            
             margin-top: 20px;
             margin-bottom: 20px;
             a{
                 margin-right: 10px;
                 margin-left: 10px;
             }
-        .social-links{
-            a{
-              &:hover{
-                text-decoration: none;
-              }  
-            }
-            .span{
-                @media(max-width: 768px){
-                    display:none;
-                }
-            }
-        }
         }
     }
     .hero-yellow{
@@ -255,6 +244,46 @@ h1{
         }
     }
 }
+
+.social-links{
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    a{
+         
+        .span{
+            @media(max-width: 768px){
+                display:none;
+            }
+        }
+    }
+    .github{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    .linkedin{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    .emailme{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    }
 .logos{
     background-color: var(--base-100);
     border-radius: 30px;

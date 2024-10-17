@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo-holder">
+        <a href="#" class="logo-holder" id="index">
             <div class="logo">
                 <img id="logo-photo" src="./breannaJonesImages/breannaJonesProfile.png" alt="photo of a brown haired woman in glasses smiling to the camera">
             </div>
@@ -22,16 +22,16 @@
         <nav>
             <ul id="menu">
                 <li>
-                    <a href="index">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="skills.html">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="projests.html">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="contactMe.html">Contact Me</a>
+                    <a href="#contactMe">Contact Me</a>
                 </li>
             </ul>
             <a href="#" class="hamburger-toggle" onclick="toggleHamburgerMenu();"> 
@@ -63,18 +63,25 @@
                         my team to improve both the lives of our customers and our organization.
                     </span> 
                 </p>
-                <div class="call-to-action">
-                    <a href="#" class="button light">View Resume</a>
-                    <a href="#" class="button black">Let's connect!</a>
+                <div class="call-to-action" id="contactMe">
+                    <h3><strong>Let's connect!</strong></h3>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/Breanna-J">
+                    <div class="github">
+                        <a href="https://github.com/Breanna-J">
                         <img src="./breannaJonesImages/github.png" alt="GitHub" width="48px">                  
+                        </a>
+                    </div>
+                    <div class="linkedin">
+                        <a href="https://www.linkedin.com/in/breanna-e-jones">
+                            <img src="./breannaJonesImages/linkedin.png" alt="LinkedIn" width="48px"> 
+                        </a>
+                    </div>
+                    <div class="emailme">
+                    <a class="email" href="mailto:jones.breanna112@gmail.com">
+                        <img src="./breannaJonesImages/email.png" width="48px">
                     </a>
-                    <a href="https://www.linkedin.com/in/breanna-e-jones">
-                        <img src="./breannaJonesImages/linkedin.png" alt="LinkedIn" width="48px">
-                        
-                    </a>
+                    </div>           
                 </div>
             </div>
             <div class="hero-yellow">
@@ -135,7 +142,7 @@
                 </div>
             </div>
         </section>
-        <section class="skills container">
+        <section class="skills container" id="skills">
             <h2>
                 <small>About Me</small>
                 Skills
@@ -192,7 +199,7 @@
                         a key role in shaping the group’s direction, <span>offering ideas and 
                         receiving valuable feedback</span> from WGU Faculty Mentors. I’ve focused 
                         on strategic <span>membership growth and building connections</span> in a largely 
-                        unconnected university environment. <br>
+                        unconnected university environment. <br><br>
                         In my leadership role, I <span>organize professional development workshops, 
                         networking events, and mentorship programs</span> that connect students with 
                         industry professionals. I also <span>manage our section’s budget, secure 
@@ -216,6 +223,7 @@
                         working closely with staff, parents, and local organizations. By developing strategic 
                         outreach initiatives, I helped <span>grow membership by 120% within a month</span> and expanded our 
                         volunteer team from 3 to over 35 people that consistently attend.
+                        <br><br>
 
                         In my leadership role, I plan large-scale events, manage budgets, and <span>oversee communications</span> 
                         through newsletters, social media, and email campaigns. I also <span>lead fundraising efforts</span> and 
@@ -236,7 +244,7 @@
                         from initial request meetings  to execution, ensuring a seamless and 
                         high-quality experience. I <span>coordinate with leadership to understand 
                         their needs and preferences</span>, creating a customized catering plan and 
-                        menu. <br>
+                        menu. <br><br>
                         I <span>work closely with other volunteers and vendors</span> to ensure 
                         timely delivery and presentation, while overseeing logistics 
                         such as venue setup, staffing, and equipment needs. I am 
@@ -250,7 +258,7 @@
                 </article>
             </div>
         </div>
-        <section class="bento">
+        <section class="bento" id="projects"> 
             <h2>
                 <small>
                     Previous
@@ -284,7 +292,6 @@
                 </a>
             </div>
         </section>
-
     </main>
 </body>
 </html>
