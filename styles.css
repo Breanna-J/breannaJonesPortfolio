@@ -1,3 +1,4 @@
+/*yellow classes are pink. TODO: change the word yellow to pink*/
 *, *::before, *::after{
     box-sizing: border-box;
     margin:0;
@@ -9,18 +10,14 @@
     --base-100:#f1f1f1;
     --base-400: #555;
     --base-800:#000;
-    --yellow: #ffda4b;
-    --yellow-100:#fffbe6;
-    --yellow-400: #ffda4b;
-    --yellow-800:#8b6f00;
+    --yellow: rgb(252, 180, 252);
+    --yellow-100:hsl(293, 100%, 95%);
+    --yellow-400: rgb(252, 180, 252);
+    --yellow-800:rgb(214, 6, 211);
     --blue: #0a61ae;
     --blue-100:#e2f8ff;
     --blue-400: #61dafb;
     --blue-800:#0a61ae;
-    /*learning color theory- 
-    might change this later to pinks instead of blues*/
-    
-
 }
 
 body{
@@ -32,14 +29,13 @@ body{
     font-style: normal;
     font-variation-settings: "wdth" 100;
     font-size: 30px;
+    padding-bottom: 1000px;
 
   
 
 }
         /*font link to google: 
         https://fonts.google.com/selection?vfonly=true */
-      
-
 a{
     text-decoration: none;
     /*removes the all current effects like automatic
@@ -49,7 +45,6 @@ a{
     &:hover{text-decoration: underline;}
     /*makes the text have an underline wheen the mouse goes over it*/
 }
-
 header {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -60,20 +55,16 @@ header {
     /*about the size of a desktop*/
     margin:auto; 
     /*centers if the margin is larger than ^*/
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2    );
-
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     .logo-holder{
         display:flex;
         padding:10px;
         align-items: center;
-        font-weight: 600;
-        font-size: 45px;
-        
-
-        
-
-
+        font-weight: 700;
+        font-size: 55px;
+        text-decoration: none;
+        color:var(--base-800);
 
         .logo{
             #logo-photo{
@@ -87,9 +78,7 @@ header {
             }
 
             .logo-text{
-                flex: 1;
-                
-    
+                flex: 1;                  
             }
                 
         }
@@ -111,8 +100,8 @@ header {
                     padding: 10px 20px;/*first number top/bottom and second is left and right*/
                     color:var(--base);
                     &:hover {
-                        background: var(--base-100);
-                        border-radius: 12%;
+                        background: var(--yellow);
+                        border-radius: 30%;
                         text-decoration: none;
 
                     }
@@ -165,4 +154,403 @@ header {
         }
     }
     
+}
+.container{
+    max-width: 1440px;
+    margin:auto;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @media (max-width: 1440px){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.button{
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: var(--blue-800);
+    color: var(--yellow-100); 
+    border-radius: 20px;
+    transition: 0.3s all;
+    &:hover{
+        text-decoration: none;
+        background-color: var(--yellow-800);
+    }
+    &.light{
+        background-color: var(--yellow);
+        color: var(--base-800);
+        &:hover{
+            background-color: var(--yellow-100);
+        }
+    }
+    &.black{
+        background-color: black;    
+        color: var(--yellow);
+        &:hover{
+            background-color: var(--base-400);
+        }
+    }
+}
+h1{
+    font-size: 64px;
+    line-height:1;
+    margin-bottom: 10px;
+    small{
+        display: block;
+        font-weight: 100;
+    }
+    @media(max-width: 1024px){
+        font-size: 48px;
+    }
+}
+.hero{
+    display: flex;/*makes each item sit next to eachother as columns*/
+    @media(max-width: 1024px){
+        flex-direction: column;
+    }
+    margin-top: 50px;
+    .hero-blue{
+        flex: 1;
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        justify-content: center;
+        width: 65%;
+        .call-to-action{
+            
+            margin-top: 20px;
+            margin-bottom: 20px;
+            a{
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .hero-yellow{
+        flex:1;
+        background-color:var(--yellow-100);
+        border-radius:30px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .BreannaJonesHandsOnHips{
+            margin-top: -50px;
+            max-width: 750px;
+            margin-bottom: -1px;
+        }
+    }
+}
+
+.social-links{
+    
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    a{
+         
+        .span{
+            @media(max-width: 768px){
+                display:none;
+            }
+        }
+    }
+    .github{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    .linkedin{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    .emailme{
+        padding: 0px 50px;
+        &:hover{
+        text-decoration: none;
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+    }
+    }
+.logos{
+    background-color: var(--base-100);
+    border-radius: 30px;
+    padding: 30px 30px;
+    @media (max-width: 1024px) {
+        border-radius: 0px;
+    }
+    .marquee{
+        width: 100vw;
+        max-width: 100%;
+        height: 135px;
+        overflow:hidden;
+        position:relative;
+        .track{
+            position:absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 40s linear infinite;
+            display: flex;
+            gap: 10px;
+        }
+    }
+}
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);/*make 2 copies of the image tags in the same div and set to -50%*/
+    }
+}
+h2{
+    font-size: 64px;
+    line-height:1;
+    margin-bottom:10px;
+    text-align: center; 
+    color: var(--base-800);
+    padding:30px;
+
+    small{
+        display: block;
+        font-weight: 100;
+        font-weight: 0.5em;
+        color: var(--base);
+    }
+
+    @media(max-width: 1024px){
+        font-size: 48px;
+    }
+}
+.skills{
+
+    .holder-blue {
+        background-color: var(--blue-100);
+        border-radius: 30px;
+        padding: 30px;
+        display: flex;
+        @media (max-width:1024px) {
+            flex-direction: column;            
+        }
+        .left-column{
+            flex:1;
+            ul{
+                list-style-type: none;
+                gap:10px;
+                margin-right: 100px;
+                margin-bottom:20px;
+                li{
+                    display:inline-block;
+                    background-color:var(--yellow);
+                    border-radius: 20px;
+                    padding: 10px 15px;
+
+                }
+
+            }
+        
+        }
+        .right-column{
+            flex:1;
+            p{
+                margin-bottom: 20px;
+
+            }
+        }
+    }
+    
+}
+h3{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: var(--base-800);
+    }
+.work-experience{    
+    .jobs{
+        display: flex;
+        gap: 30px;
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+        article{
+            background-color: var(--yellow-100);
+            padding: 30px;
+            border-radius: 30px;
+            flex:1;
+            h3{
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            div{
+                font-weight: 600;
+                margin-bottom:5px;
+                color: var(--base-800);
+            } 
+            p{
+                margin-bottom: 10px;
+                span{
+                    color: var(--yellow-800);
+                }
+            }
+            figure{
+                width: 100%;
+                padding-top: 56.25%;
+                overflow: hidden;
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 30px; 
+                    transition: ease 3s all;  
+
+                }
+                figcaption{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: var(--yellow-400);
+                    color: var(--base-800);
+                    text-align: center;
+                    padding:10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 0.3s all;
+                    font-size: 25px;
+                }
+                 &:hover {
+                    figcaption{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                 }
+            }
+        }
+        
+        
+    }
+}
+.bento{
+    .bento-grid{
+        margin: 30px;
+        padding:30px;
+        border-radius: 30px;
+        display: grid;
+        grid-gap:30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        height:960px;
+        background-color: var(--base-100);
+        @media (max-width:1024px) {
+            grid-template-rows: repeat(8, 1fr);
+        }
+        @media (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: auto;
+        }
+        .bento-item{
+            padding:30px;
+            background-color: var(--base);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 30px; 
+                transition: ease 3s all;  
+
+            }
+            &:hover{
+                img {
+                    transform: scale(1.2);
+                    }
+            }
+            @media (max-width:768px) {
+                height: 240px;
+            }
+            &:nth-child(1){
+                grid-column: span 2;
+                grid-row: span 2;
+                @media (max-width:1024px) {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(2){
+                grid-column: span 2;
+                grid-row: span 1;
+                @media (max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(3){
+                grid-column: span 1;
+                grid-row: span 1;
+                @media (max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(4){
+                grid-column: span 1;
+                grid-row: span 1;
+                @media (max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 2;
+                }
+            }
+            &:nth-child(5){
+                grid-column: span 2;
+                grid-row: span 1;
+                @media (max-width:1024px) {
+                    grid-column: span 3;
+                    grid-row: span 4;
+                }
+            }
+            &:nth-child(6){
+                grid-column: span 5;
+                grid-row: span 3;
+                @media (max-width:1024px) {
+                    grid-column: span 5;
+                    grid-row: span 2;
+                }
+            }
+
+        }
+    }
+}
+.resources{
+    background-color: var(--yellow-100);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 30px;
+    @media (max-width:768px) {
+        visibility: hidden;
+        
+    }
 }
