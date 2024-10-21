@@ -509,7 +509,7 @@ h3{
             img {
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: -10%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 30px; 
@@ -579,6 +579,16 @@ h3{
     @media (max-width:768px) {
         visibility: hidden;
         
+    }
+}
+.technicalDocumentation{
+    font-size: 50px;
+    padding: 20px;
+}
+.tableOfContents{
+    li{
+        padding-left: 20px;
+        padding-bottom: 10px;
     }
 }
 
