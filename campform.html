@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Camp Registration</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpg" href="./breannaJonesImages/Summer Camp.png">
+</head>
+
+<header>
+    <a href="#" class="logo-holder" id="index">
+        <div class="logo">
+            <img id="logo-photo" src="./breannaJonesImages/Summer Camp.png" alt="summer camp 2025 logo">
+        </div>
+        <div class="logo-text">Summer Camp Registration</div>
+    </a>
+</header>
+
+<body>
+    <h3 class="form label">Thank your for registering your child for Summer Camp!</h3>
+        <form class="form" id="survey-form">
+            <label class="name label"> <h4>First Name:</h4> <input class="inputBox" id="name" type="text" placeholder="name" required></input></label>
+            <label class="name label"> <h4>Last Name:</h4> <input class="inputBox" id="name" type="text" placeholder="name" required></input></label>
+            <label class="email label"><h4>Email: </h4><input class="inputBox" id="email" type="email" placeholder="email" required></input></label>
+            <label class="age label"><h4>Age: </h4><input class="inputBox" id="number" type="number" placeholder="age" min="10" max="18"></input></label>
+            <label class="label"><h4>My child is interested in... </h4><Select class="dropdown ul inputBox" type="select"></label> 
+            <option value="1">exploring</option>
+            <option value="2">crafts</option>
+            <option value="3">animals</option>
+            <option value="4">sports</option>
+            </select></label>
+            <label>
+                <h4>Which type of camp will your child attend?</h4> </label>
+            <label>
+                <input class="selector" type="radio" name="account-type" class="inline" value="5" /> Day Camp</label>
+            <label>
+                <input class="selector" type="radio" name="account-type" class="inline" value="6" /> Overnight Camp</label>
+            <label> <h4>How'd you hear about us?</h4> </label>
+            <label>
+                <input class="selector" type="checkbox" name="friend" class="inline" required value="7"/> Friend </label>
+            <label>
+                <input class="selector" type="checkbox" name="church" class="inline" required value="8" /> Church  </label>
+            <label>
+                <input class="selector" type="checkbox" name="online" class="inline" required value="9" /> Online </label>       
+            <label>
+                <input class="selector" type="checkbox" name="other" class="inline" required value="10" /> Other </label>
+            <label><h4>Tell us a little bit about your child:</h4></label> 
+                <label class="inputBox"><textarea class="inputBox" name="bio" rows="5" cols="30" placeholder="likes, dislikes, allergies..."></textarea>
+                    </label>
+            <input class="button" id="submit" type="submit" value="Submit"></input>
+        </form>
+    </body>
+<html>
