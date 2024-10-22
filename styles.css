@@ -603,11 +603,14 @@ h3{
             padding-bottom: 10px;
         }
     }
-
-    img{
-        border-radius: 30px;
-        align-items: center;
-        padding: 20px;
+    .section{
+        p{
+            img{
+                border-radius: 30px;
+                margin-left: 30%;
+                padding: 20px;
+            }
+        }
     }
 }
 
