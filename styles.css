@@ -603,6 +603,12 @@ h3{
             padding-bottom: 10px;
         }
     }
+
+    img{
+        border-radius: 30px;
+        align-items: center;
+        padding: 20px;
+    }
 }
 
 
