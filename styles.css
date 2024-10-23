@@ -510,8 +510,8 @@ h3{
                 position: absolute;
                 top: 0;
                 left: -10%;
-                height: 100%;
-                object-fit: cover;
+                width: 110%;
+                object-fit: fill;
                 border-radius: 30px; 
                 transition: ease 3s all;  
 
