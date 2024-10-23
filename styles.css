@@ -585,6 +585,8 @@ h3{
     font-size: 40px;
     margin:1%;
     padding: 20px;
+    align-items: normal;
+    
     
     h1{
         font-size: 60px;
@@ -605,22 +607,33 @@ h3{
             padding-bottom: 10px;
         }
     }
+    p{
+        padding-bottom: 30px;
+    }
+    ul{
+        padding-bottom: 30px;
+    }
     .section{
-        
         border-style: solid;
         p{
-            padding: 20px;
-            img{ 
+            
+            img { 
                 align-items: center;
                 width: 25%;
                 border-radius: 30px;
                 padding: 10px;
-                
-                .logos{
-                    height: 10%;
-                }
+                margin-top: 20px;
+                border-style: solid;
+                }   
+            .logos{
+                height: 5%;
+            
             }
-        }
+            .section{
+                min-width: 60%;
+                    
+                }              
+          }
     }
 }
 
