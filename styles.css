@@ -1,11 +1,8 @@
-
-
-
-/*yellow classes are pink. TODO: change the word yellow to pink*/
-*, *::before, *::after{
+/*reset CSS to remove default margin and padding of all elements*/
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
 }
 
 :root{
@@ -13,14 +10,17 @@
     --base-100:#f1f1f1;
     --base-400: #555;
     --base-800:#000;
-    --yellow: rgb(252, 180, 252);
-    --yellow-100:hsl(293, 100%, 95%);
-    --yellow-400: rgb(252, 180, 252);
-    --yellow-800:rgb(214, 6, 211);
+    --pink: rgb(252, 180, 252);
+    --pink-100:hsl(293, 100%, 95%);
+    --pink-400: rgb(252, 180, 252);
+    --pink-800:rgb(214, 6, 211);
     --blue: #0a61ae;
     --blue-100:#e2f8ff;
     --blue-400: #61dafb;
     --blue-800:#0a61ae;
+    --font-heading: 'Advent Pro', serif;
+    --font-body: 'Advent Pro', serif;
+    --spacing:16px;
 }
 
 body{
@@ -31,7 +31,7 @@ body{
     font-weight: 500;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-    font-size: 30px;
+    font-size: 16px;
     padding-bottom: 10px;
 
   
@@ -103,7 +103,7 @@ header {
                     padding: 10px 20px;/*first number top/bottom and second is left and right*/
                     color:var(--base);
                     &:hover {
-                        background: var(--yellow);
+                        background: var(--pink);
                         border-radius: 30%;
                         text-decoration: none;
 
@@ -173,23 +173,23 @@ header {
     display: inline-block;
     padding: 10px 40px;
     background-color: var(--blue-800);
-    color: var(--yellow-100); 
+    color: var(--pink-100); 
     border-radius: 20px;
     transition: 0.3s all;
     &:hover{
         text-decoration: none;
-        background-color: var(--yellow-800);
+        background-color: var(--pink-800);
     }
     &.light{
-        background-color: var(--yellow);
+        background-color: var(--pink);
         color: var(--base-800);
         &:hover{
-            background-color: var(--yellow-100);
+            background-color: var(--pink-100);
         }
     }
     &.black{
         background-color: black;    
-        color: var(--yellow);
+        color: var(--pink);
         &:hover{
             background-color: var(--base-400);
         }
@@ -198,17 +198,19 @@ header {
 .connect{
     background-color: var(--blue-800);
     border-radius: 50%;
-    padding: 10px;
+    padding: 5%;
     border: none;
     cursor: pointer;
+    margin-left: 2%;
+    margin-right: 2%;
     &:hover{
-        background-color: var(--yellow-800);
+        background-color: var(--pink-800);
         transform: scale(1.25);
         transition: ease-out 1s;
     }
 }   
 h1{
-    font-size: 64px;
+    font-size: 40px;
     line-height:1;
     margin-bottom: 10px;
     small{
@@ -216,7 +218,7 @@ h1{
         font-weight: 100;
     }
     @media(max-width: 1024px){
-        font-size: 48px;
+        font-size: 32px;
     }
 }
 .hero{
@@ -224,38 +226,60 @@ h1{
     @media(max-width: 1024px){
         flex-direction: column;
     }
-    margin-top: 50px;
     .hero-blue{
-        flex: 1;
+        flex: grow;
         background-color: var(--blue-100);
         border-radius: 30px;
-        display: flex;
-        padding: 30px;
-        flex-direction: column;
+        padding:10%;
         justify-content: center;
-        width: 65%;
-        .call-to-action{
-            
-            margin-top: 20px;
-            margin-bottom: 20px;
-            a{
-                margin-right: 10px;
-                margin-left: 10px;
+        width: 50%;
+   
+    .social-links{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 25%;
+ 
+        a{
+            .span{
+                @media(max-width: 768px){
+                    display:none;
+                }
             }
         }
-    }
-    .hero-yellow{
-        flex:1;
-        background-color:var(--yellow-100);
+        .github{
+            width: 25%;
+            padding:10%;
+            &:hover{
+            text-decoration: none;
+            transform: scale(1.25);
+            transition: ease-out 1s;
+        }
+        }
+        .linkedin{
+
+            &:hover{
+            text-decoration: none;
+            transform: scale(1.25);
+            transition: ease-out 1s;
+        }
+        }
+        .emailme{
+            &:hover{
+            text-decoration: none;
+            transform: scale(1.25);
+            transition: ease-out 1s;
+        }
+        }
+    }}
+    .hero-pink{
+        flex:grow;
+        background-color:var(--pink-100);
         border-radius:30px;
-        padding: 0px 30px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        width:40%;
         .BreannaJonesHandsOnHips{
-            margin-top: -50px;
-            max-width: 750px;
-            margin-bottom: -1px;
+            width: 100%;
+            height: auto;
         }
     }
 }
@@ -271,63 +295,18 @@ h1{
     width: 450px;
     height: 45px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 16px;
     margin: 10px 10px;
     border-radius: 30px;
 }
-.button{
-    margin-top: 55px;
-    background-color: var(--yellow-100);
-    color: var(--blue-800);
-    font-size: 25px;
-    font-weight: 600;
 
-}
 .selector{
     padding-top: 15px;
 
     margin:10px;
 }
 
-.social-links{
-    
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-    a{
-         
-        .span{
-            @media(max-width: 768px){
-                display:none;
-            }
-        }
-    }
-    .github{
-        padding: 0px 50px;
-        &:hover{
-        text-decoration: none;
-        transform: scale(1.25);
-        transition: ease-out 1s;
-    }
-    }
-    .linkedin{
-        padding: 0px 50px;
-        &:hover{
-        text-decoration: none;
-        transform: scale(1.25);
-        transition: ease-out 1s;
-    }
-    }
-    .emailme{
-        padding: 0px 50px;
-        &:hover{
-        text-decoration: none;
-        transform: scale(1.25);
-        transition: ease-out 1s;
-    }
-    }
-    }
+
 .logos{
     background-color: var(--base-100);
     border-radius: 30px;
@@ -360,7 +339,7 @@ h1{
     }
 }
 h2{
-    font-size: 64px;
+    font-size: 32px;
     line-height:1;
     margin-bottom:10px;
     text-align: center; 
@@ -375,7 +354,7 @@ h2{
     }
 
     @media(max-width: 1024px){
-        font-size: 48px;
+        font-size: 24px;
     }
 }
 .skills{
@@ -397,7 +376,7 @@ h2{
                 margin-bottom:20px;
                 li{
                     display:inline-block;
-                    background-color:var(--yellow);
+                    background-color:var(--pink);
                     border-radius: 20px;
                     padding: 10px 15px;
 
@@ -417,7 +396,7 @@ h2{
     
 }
 h3{
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1;
     margin-bottom: 20px;
@@ -431,7 +410,7 @@ h3{
             flex-direction: column;
         }
         article{
-            background-color: var(--yellow-100);
+            background-color: var(--pink-100);
             padding: 30px;
             border-radius: 30px;
             flex:1;
@@ -447,7 +426,7 @@ h3{
             p{
                 margin-bottom: 10px;
                 span{
-                    color: var(--yellow-800);
+                    color: var(--pink-800);
                 }
             }
             figure{
@@ -470,14 +449,14 @@ h3{
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background-color: var(--yellow-400);
+                    background-color: var(--pink-400);
                     color: var(--base-800);
                     text-align: center;
                     padding:10px;
                     opacity: 0;
                     visibility: hidden;
                     transition: ease 0.3s all;
-                    font-size: 25px;
+                    font-size: 16px;
                 }
                  &:hover {
                     figcaption{
@@ -585,7 +564,7 @@ h3{
     }
 }
 .resources{
-    background-color: var(--yellow-100);
+    background-color: var(--pink-100);
     padding: 30px;
     margin: 30px;
     border-radius: 30px;
@@ -595,21 +574,11 @@ h3{
     }
 }
 .technicalDocumentation{
-    font-size: 40px;
+    font-size: 32px;
     margin:1%;
     padding: 2%;
     align-items: normal;
     
-    
-    h1{
-        font-size: 60px;
-        margin-top: 20px;
-    }
-
-    h3{
-        font-size: 50px;
-    }
-
     .tableOfContents{
         border-bottom: #000;
         padding-bottom: 20px;
