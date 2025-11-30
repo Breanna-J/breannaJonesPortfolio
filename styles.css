@@ -195,6 +195,18 @@ header {
         }
     }
 }
+.connect{
+    background-color: var(--blue-800);
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--yellow-800);
+        transform: scale(1.25);
+        transition: ease-out 1s;
+    }
+}   
 h1{
     font-size: 64px;
     line-height:1;
