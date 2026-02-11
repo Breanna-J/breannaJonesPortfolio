@@ -351,7 +351,9 @@ h3{
   gap: 18px;
 }
 
-.skills .holder-blue .left-column{ flex:1; }
+.skills .holder-blue .left-column{ 
+  flex:1; 
+}
 
 .skills .holder-blue .left-column ul{
   list-style:none;
