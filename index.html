@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breanna Jones Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="icon" type="image/jpg" href="./breannaJonesImages/breannaJonesProfile">
+<link rel="icon" type="image/png" href="./breannaJonesImages/breannaJonesProfile.png">
 </head>
 <body>
     
@@ -36,16 +36,23 @@
                     <a href="#contactMe">Contact Me</a>
                 </li>
             </ul>
-            <a href="#" class="hamburger-toggle" onclick="toggleHamburgerMenu();"> 
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <button
+                class="hamburger-toggle"
+                aria-controls="menu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                onclick="toggleHamburgerMenu(this)"
+                >
+                <span class="sr-only">Toggle navigation</span>
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
                   </svg>
                   
-            </a>
+            </button>
         </nav>
     </header>
     <main>
-        <section class="hero container">
+        <section class="hero container" id="home">
             <div class="hero-blue">
                 <h1>
                     <small>
@@ -62,21 +69,15 @@
                     <h3><strong>Let's connect!</strong></h3>
                 </div>
                 <div class="social-links">
-                    <button class="connect">
-                        <a href="https://github.com/Breanna-J">
+                    <a class="connect" href="https://github.com/Breanna-J">
                         <img src="./breannaJonesImages/github.png" alt="GitHub" width="48px">                  
-                        </a>
-                    </button>
-                    <button class="connect">
-                        <a href="https://www.linkedin.com/in/breanna-e-jones">
-                            <img src="./breannaJonesImages/linkedin.png" alt="LinkedIn" width="48px"> 
-                        </a>
-                    </button>
-                    <button class="connect">
-                    <a class="email" href="mailto:jones.breanna112@gmail.com">
-                        <img src="./breannaJonesImages/email.png" width="48px">
                     </a>
-                    </button>          
+                    <a class="connect"href="https://www.linkedin.com/in/breanna-e-jones">
+                        <img src="./breannaJonesImages/linkedin.png" alt="LinkedIn" width="48px"> 
+                    </a>
+                    <a class="connect" href="mailto:jones.breanna112@gmail.com">
+                        <img src="./breannaJonesImages/email.png" width="48px">
+                    </a>         
                 </div>
             </div>
             <div class="hero-pink">
@@ -175,7 +176,144 @@
 
                 </div>
             </div>
-        </section>
+        </section>       <section class="myProjects" id="projects"> 
+            <h2>
+                <small>
+                    My Recent
+                </small>
+                Projects
+            </h2>
+          <section class="case-studies">
+
+            <div class="projects">
+                <article class="project-card">
+                    <h3>Finite State Machine (Rust)</h3>
+
+                    <h4 class="project-description">
+                        Built a state machine in Rust to model controlled state transitions using enums and 
+                        pattern matching, emphasizing memory safety and predictable system behavior.
+                    </h4>
+
+                    <h4>Technologies Used</h4>
+                    <ul class="technologies-used">
+                        <li>Rust</li>
+                        <li>Enums & Pattern Matching</li>
+                        <li>Ownership & Borrowing</li>
+                        <li>Finite State Machines</li>
+                        <li>Cargo</li>
+                    </ul>
+
+                    <h4>What I Learned</h4>
+                    <ul class="skills-gained">
+                        <li>Modeling system behavior using finite state machines</li>
+                        <li>Enforcing valid state transitions at compile time</li>
+                        <li>Leveraging Rust’s type system for safer code</li>
+                        <li>Designing predictable and testable system logic</li>
+                    </ul>
+
+                    <a
+                        class="github-link"
+                        href="https://github.com/Breanna-J/rustStateMachine.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository →
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Package Delivery Routing Application</h3>
+
+                    <h4 class="project-description">
+                        A package delivery application that simulates real-world logistics by optimizing routes with 
+                        a nearest-neighbor algorithm while managing deadlines, delays, and address corrections.
+                    </h4>
+
+                    <h4>Technologies Used:</h4>
+                    <p><strong>Language:</strong> Python</p>
+                    <p><strong>Data Structures:</strong> Hash Tables, Linked Lists</p>
+                    <p><strong>Algorithm:</strong> Nearest-Neighbor</p>
+                    <h4>Skills Gained:</h4>
+                    <ul class="skills-gained">
+                        <li>Time and State Simulation</li>
+                        <li>Graph-based Distance Modeling</li>
+                        <li>Input Validation and Error Handling</li>
+                        <li>Algorithm Design</li>
+                        <li>Problem Solving</li>
+                        <li>CSV Data Handling</li>
+                        <li>CLI Interface</li>
+                    </ul>
+
+                    <a
+                        class="github-link"
+                        href="https://github.com/Breanna-J/c950dsaII.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository →
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <h3>Multithreaded Hotel Scheduling Application</h3>
+
+                    <h4 class="project-description">
+                        Modified a Spring and Angular hotel scheduling application to support multithreaded localization, 
+                        time zone conversion, currency display, and Docker-based deployment.
+                    </h4>
+
+                    <h4>Technologies</h4>
+                    <ul class="technologies-used">
+                        <li>Java</li>
+                        <li>Spring Framework</li>
+                        <li>Angular</li>
+                        <li>Multithreading</li>
+                        <li>Internationalization (i18n)</li>
+                        <li>Time Zone APIs</li>
+                        <li>Docker</li>
+                        <li>GitLab</li>
+                    </ul>
+
+                    <h4>What I Learned</h4>
+                    <ul class="skills-gained">
+                        <li>Writing multithreaded Java code in a Spring application</li>
+                        <li>Implementing localization with resource bundles</li>
+                        <li>Handling time zone conversion across regions</li>
+                        <li>Coordinating frontend and backend application changes</li>
+                        <li>Containerizing a full-stack application using Docker</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>Sugar and Spice Desserts LLC</h3>
+
+                    <h4 class="project-description">
+                        A responsive website for a local dessert business, featuring a modern design with 
+                        interactive elements and optimized performance.
+                    </h4>
+
+                    <h4>Technologies Used:</h4>
+                    <p><strong>Language:</strong> HTML, CSS, JavaScript</p>
+                    <h4>Skills Gained:</h4>
+                    <ul class="skills-gained">
+                        <li>Responsive Web Design</li>
+                        <li>Interactive UI Elements</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-Browser Compatibility</li>
+                        <li>Accessibility Standards</li>
+                    </ul>
+
+                    <a
+                        class="github-link"
+                        href="https://github.com/Breanna-J/sugar-and-spice-desserts.git"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View GitHub Repository →
+                    </a>
+                </article>
+            </div>
+            </section>
         <div class="work-experience container">
             <h2>
                <small>Recent</small> Work Experience
@@ -253,143 +391,7 @@
                 </article>
             </div>
         </div>
-        <section class="bento" id="projects"> 
-            <h2>
-                <small>
-                    Previously
-                </small>
-                Completed Projects
-            </h2>
-          <section class="case-studies">
-
-            <div class="projects">
-                <article class="project-card">
-                    <h2>Finite State Machine (Rust)</h2>
-
-                    <p class="project-description">
-                        Built a state machine in Rust to model controlled state transitions using enums and pattern matching, emphasizing memory safety and predictable system behavior.
-                    </p>
-
-                    <h4>Technologies</h4>
-                    <ul class="technologies-used">
-                        <li>Rust</li>
-                        <li>Enums & Pattern Matching</li>
-                        <li>Ownership & Borrowing</li>
-                        <li>Finite State Machines</li>
-                        <li>Cargo</li>
-                    </ul>
-
-                    <h4>What I Learned</h4>
-                    <ul class="skills-gained">
-                        <li>Modeling system behavior using finite state machines</li>
-                        <li>Enforcing valid state transitions at compile time</li>
-                        <li>Leveraging Rust’s type system for safer code</li>
-                        <li>Designing predictable and testable system logic</li>
-                    </ul>
-
-                    <a
-                        class="github-link"
-                        href="https://github.com/Breanna-J/rustStateMachine.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View GitHub Repository →
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <h2>Package Delivery Routing Application</h2>
-
-                    <h3 class="project-description">
-                        A package delivery application that simulates real-world logistics by optimizing routes with a nearest-neighbor algorithm while managing deadlines, delays, and address corrections.
-                    </h3>
-
-                    <h3>Technologies Used:</h3>
-                    <p><strong>Language:</strong> Python</p>
-                    <p><strong>Data Structures:</strong> Hash Tables, Linked Lists</p>
-                    <p><strong>Algorithm:</strong> Nearest-Neighbor</p>
-                    <h3>Skills Gained:</h3>
-                    <ul class="skills-gained">
-                        <li>Time and State Simulation</li>
-                        <li>Graph-based Distance Modeling</li>
-                        <li>Input Validation and Error Handling</li>
-                        <li>Algorithm Design</li>
-                        <li>Problem Solving</li>
-                        <li>CSV Data Handling</li>
-                        <li>CLI Interface</li>
-                    </ul>
-
-                    <a
-                        class="github-link"
-                        href="https://github.com/Breanna-J/c950dsaII.git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View GitHub Repository →
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <h2>Multithreaded Hotel Scheduling Application</h2>
-
-                    <p class="project-description">
-                        Modified a Spring and Angular hotel scheduling application to support multithreaded localization, time zone conversion, currency display, and Docker-based deployment.
-                    </p>
-
-                    <h4>Technologies</h4>
-                    <ul class="technologies-used">
-                        <li>Java</li>
-                        <li>Spring Framework</li>
-                        <li>Angular</li>
-                        <li>Multithreading</li>
-                        <li>Internationalization (i18n)</li>
-                        <li>Time Zone APIs</li>
-                        <li>Docker</li>
-                        <li>GitLab</li>
-                    </ul>
-
-                    <h4>What I Learned</h4>
-                    <ul class="skills-gained">
-                        <li>Writing multithreaded Java code in a Spring application</li>
-                        <li>Implementing localization with resource bundles</li>
-                        <li>Handling time zone conversion across regions</li>
-                        <li>Coordinating frontend and backend application changes</li>
-                        <li>Containerizing a full-stack application using Docker</li>
-                    </ul>
-
-
-                <article class="project-card">
-                <h2>Sugar and Spice Desserts LLC</h2>
-
-                <h3 class="project-description">
-                    A responsive website for a local dessert business, featuring a modern design with interactive elements and optimized performance.
-                </h3>
-
-                <h3>Technologies Used:</h3>
-                <p><strong>Language:</strong> HTML, CSS, JavaScript</p>
-                <h3>Skills Gained:</h3>
-                <ul class="skills-gained">
-                    <li>Responsive Web Design</li>
-                    <li>Interactive UI Elements</li>
-                    <li>Performance Optimization</li>
-                    <li>Cross-Browser Compatibility</li>
-                    <li>Accessibility Standards</li>
-                </ul>
-
-                <a
-                    class="github-link"
-                    href="https://github.com/Breanna-J/sugar-and-spice-desserts.git"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View GitHub Repository →
-                </a>
-                </article>
-
-
-
-            </div>
-            </section>
+ 
             <!-- <div class="bento-grid">
                 <a href="https://breanna-j.github.io/sugarAndSpiceDessertsLLC/" class="bento-item">
                     <img id="sugarAndSpiceDessertsLLCWebsite" src="./breannaJonesImages/Screenshot 2024-11-13 111654.png" 
@@ -415,7 +417,7 @@
                 </a> -->
             </div>
         </section>
-        <section class="resources">
+        <!-- <section class="resources">
             <div><h3>Credits to the creators of the icons above:</h3></div>
             <ul class="resources">
                 <li><a href="https://www.flaticon.com/free-icons/css" title="css icons">CSS icon created by Pixel perfect - Flaticon</a></li>
@@ -424,7 +426,7 @@
                 <li><a href="https://www.flaticon.com/free-icons/c-" title="c++ icons">C++ icon created by Icon Desai - Flaticon</a></li>
                 <li><a href="https://www.flaticon.com/free-icons/steam" title="steam icons">Java created by Freepik - Flaticon</a></li>
             </ul>
-        </section>
+        </section> -->
     </main>
 </body>
 </html>
