@@ -249,7 +249,19 @@ h3{
   background-color: var(--blue-100);
   border-radius: 30px;
   padding: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
+.hero .hero-blue .quick-facts{
+  list-style:none;
+  margin-top: 20px;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.hero .hero-blue .lets-connect{
+    justify-items: center;
+    margin-top: 20px; }
 
 .hero .hero-blue .social-links{
   display:flex;
@@ -475,7 +487,7 @@ h3{
   /* desktop typography */
   body{ font-size: 20px; }
   h1{ font-size: 48px; }
-  h2{ font-size: 32px; padding: 30px; }
+  h2{ font-size: 32px; }
   h3{ font-size: 24px; margin-bottom: 20px; }
 
   /* header: row layout + full menu visible + hamburger hidden */
@@ -512,18 +524,21 @@ h3{
   header nav ul#menu li a{
     display:inline-block;
     width:auto;
-    padding: 10px 20px;
+    padding: 20px 20px;
   }
 
   header nav ul#menu li a:hover{
-    background: var(--pink);
-    border-radius: 30%;
+    background: var(--base-100);
+    border-radius: 25%;
+    border: #000 solid 1px;
     text-decoration:none;
   }
 
   header nav .hamburger-toggle{
     display:none;
   }
+
+
 
   /* hero section */
   .hero{
@@ -561,11 +576,15 @@ h3{
 @media (min-width: 1024px){
   .work-experience .jobs{
     flex-direction: row;
-    width: 100%;
+  }
+  .work-experience .jobs article{
+    flex: 1;
   }
 
   /* skills */
   .skills .holder-blue{
     flex-direction: row;
+    gap: 30px;
+    padding: 75px
   }
 }
